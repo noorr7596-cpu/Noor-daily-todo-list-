@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Daily Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+    <h2>My Daily Planner</h2>
+
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">My Tasks</a>
+        <a href="#">Categories</a>
+        <a href="#">Progress</a>
+        <a href="#">Reminders</a>
+        <a href="#">Settings</a>
+    </nav>
+<div class="sidebar-bottom">
+    <div class="motivation-card">
+        <div class="motivation-illustration">
+            📅 ✨
+        </div>
+
+        <h3>Stay Focused!</h3>
+        <p>Small steps every day lead to big achievements.</p>
+    </div>
+</div>
+</aside>
+<main class="main-content">
+
+    <header class="header">
+
+        <div>
+            <h1>Good Morning!</h1>
+
+            <p>Plan your day, manage your tasks and stay productive.</p>
+        </div>
+
+    </header>
+    <div class="task-summary">
+
+    <div class="card">
+        <h2 id="total-tasks">0</h2>
+        <p>Total Tasks</p>
+    </div>
+
+    <div class="card">
+    <h2 id="pending-tasks">0</h2>
+    <p>Pending</p>
+</div>
+
+    <div class="card">
+    <h2 id="completed-tasks">0</h2>
+    <p>Completed</p>
+</div>
+
+    <div class="card">
+    <h2 id="due-today-tasks">0</h2>
+    <p>Due Today</p>
+</div>
+
+</div>
+<section class="add-task-section">
+
+    <h2>Add New Task</h2>
+
+    <form id="task-form">
+<label for="task-title">Task Title</label>
+
+<input
+    type="text"
+    id="task-title"
+    placeholder="Enter your task..."
+><label for="category">Category</label>
+
+<select id="category">
+
+    <option value="">Select Category</option>
+    <option value="design">Graphic Design</option>
+    <option value="teaching">Teaching & Courses</option>
+    <option value="client">Client Projects</option>
+    <option value="marketing">Marketing</option>
+    <option value="personal">Personal Work</option>
+
+</select>
+<label for="priority">Priority</label>
+
+<select id="priority">
+
+    <option value="">Select Priority</option>
+    <option value="high">High</option>
+    <option value="medium">Medium</option>
+    <option value="low">Low</option>
+
+</select>
+<label for="due-date">Due Date</label>
+
+<input type="date" id="due-date">
+<button type="submit">Add Task</button>
+    </form>
+
+</section>
+<section class="my-tasks">
+
+    <h2>My Tasks</h2>
+    <div class="task-search">
+  <div class="search-box">
+    <span class="search-icon">⌕</span>
+    <input
+        type="text"
+        id="search-task"
+        placeholder="Search your tasks..."
+    >
+</div>
+</div>
+
+<div class="task-filters">
+    <button data-filter="all">All Tasks</button>
+
+    <button data-filter="pending">Pending</button>
+
+    <button data-filter="completed">Completed</button>
+
+    <button data-filter="today">Due Today</button>
+
+</div>
+<div class="task-list" id="task-list">
+
+    <div class="task-item">
+
+        <input type="checkbox">
+
+        <div class="task-info">
+            <h3>Design Social Media Post</h3>
+            <p>Graphic Design | Due: Today</p>
+        </div>
+
+        <span class="priority high">High</span>
+        <div class="task-actions">
+
+    <button>Edit</button>
+    <button>Delete</button>
+
+</div>
+<div class="task-item">
+
+    <input type="checkbox">
+
+    <div class="task-info">
+        <h3>Prepare Course Lecture</h3>
+        <p>Teaching & Courses | Due: Tomorrow</p>
+    </div>
+
+    <span class="priority medium">Medium</span>
+
+    <div class="task-actions">
+        <button>Edit</button>
+        <button>Delete</button>
+    </div>
+
+</div>
+    </div>
+
+</div>
+</section>
+<section class="daily-progress">
+
+    <h2>Daily Progress</h2>
+
+    <div class="progress-info">
+        <p>Today's Completion</p>
+        <h3 id="progress-percentage">0%</h3>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+</section>
+</main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
